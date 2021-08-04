@@ -118,7 +118,7 @@ describe('DELETE /invoices/:id', function () {
     expect(response.body).toEqual({ status: 'deleted' });
   });
 });
-// end
+
 
 afterEach(async function () {
   await db.query('DELETE FROM companies');

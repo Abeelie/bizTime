@@ -9,7 +9,7 @@ beforeEach(async function() {
   let result = await db.query(`
     INSERT INTO
       companies (code, name, description) 
-      VALUES ('Tesla', 'Tesla', 'Great Company')
+      VALUES ('Tesla', 'Tesla', 'The voom voom')
       RETURNING code, name, description`);
   testComp = result.rows[0];
 });
@@ -48,7 +48,7 @@ describe("POST /companies/add", function() {
       });
     expect(response.statusCode).toEqual(201);
     expect(response.body).toEqual({
-      company: {code: "Microsoft", 
+      company: {  code: "Microsoft", 
                   name: "Microsoft", 
                   description: "Tech company"}
     });

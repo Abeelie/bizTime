@@ -11,8 +11,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 let db = new Client({
-  user: "postgres",
-  password: "root",
+  user: "",
+  password: "",
   connectionString: DB_URI
 });
 
